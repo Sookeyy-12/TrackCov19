@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+</head>
+<body>
+    <h1 id="heading">Project A</h1>
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <style>
+        body{
+            background-color: #4A4063;
+        }
+        #heading{
+            text-align: center;
+            color: #C8C6D7;
+        }
+        #map-container{
+            display: flex;
+            height: 1fr;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+        #map { 
+            border: 5px solid #783F8E;
+            height: 500px;
+            width: 1000px;
+        }
+    </style>
+    <script>
+        const map = new L.Map('map', {
+                center: new L.LatLng(30,30),
+                zoom: 1.8,
+                maxZoom: 18
+            });
+            const osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+            map.addLayer(osm);
+    </script>
+</body>
+</html>
