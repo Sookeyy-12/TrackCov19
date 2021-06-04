@@ -10,9 +10,10 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1 id="heading">Project A</h1>
+    <h1 id="heading">TrackCov19</h1>
     <div id="map-container">
         <div id="map"></div>
     </div>
@@ -39,13 +40,19 @@
     </style>
     <script>
         const map = new L.Map('map', {
-                center: new L.LatLng(30,30),
-                zoom: 1.8,
-                maxZoom: 18
-            });
-            const osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+            center: new L.LatLng(30,30),
+            zoom: 1.8,
+            maxZoom: 18
+        });
+        const osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 
-            map.addLayer(osm);
+        map.addLayer(osm);
+
+        $.getJSON("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson",function(data){
+            const countries = new L.geoJson(data);
+
+            map.addLayer(countries)
+        })
     </script>
 </body>
 </html>
