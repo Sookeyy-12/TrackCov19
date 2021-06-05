@@ -23,4 +23,4 @@ def return_data_country(name):
     return countries.get_data(name)
 
 if __name__ == "__main__":
-    app.run(port=os.getenv("PORT"))
+    app.run(port=os.getenv("PORT"), debug=True)
