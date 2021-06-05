@@ -22,5 +22,9 @@ def return_data_continent(name):
 def return_data_country(name):
     return countries.get_data(name)
 
+@app.route("/SafetyMeasures/")
+def safety_measures():
+    return render_template('safetymeasures.html')
+
 if __name__ == "__main__":
     app.run(port=os.getenv("PORT"), debug=True)
