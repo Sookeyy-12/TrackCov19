@@ -32,6 +32,19 @@ main {
     padding: 1rem;
 }
 
+.fa-primary {
+  color: rgb(11, 198, 255);
+}
+
+.fa-secondary {
+  color: rgb(23, 59, 219);
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
 .navbar {
     position: fixed;
     background-color: var(--bg-primary);
@@ -63,10 +76,26 @@ main {
     transition: var(--transition-speed);
 }
   
+.nav-link1 {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
 .nav-link:hover {
     filter: grayscale(0%) opacity(1);
     background: var(--bg-secondary);
     color: var(--text-secondary);
+}
+
+.nav-link:hover{
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
 }
   
 .link-text {
@@ -78,19 +107,16 @@ main {
     width: 2rem;
     min-width: 2rem;
     margin: 0 1.5rem;
-}
-  
-.fa-primary {
-    color: rgb(11, 198, 255);
-}
-  
-.fa-secondary {
-    color: rgb(23, 59, 219);
-}
-  
-.fa-primary,
-.fa-secondary {
+    transform: rotate(0deg);
     transition: var(--transition-speed);
+}
+
+.nav-link1 svg {
+  width: 3rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
 }
   
 .logo {
