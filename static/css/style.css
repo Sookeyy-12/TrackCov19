@@ -1,6 +1,6 @@
 :root {
     font-size: 16px;
-    font-family: 'Open Sans';
+    font-family: 'Garamond';
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
     --bg-primary: #23232e;
@@ -81,11 +81,11 @@ main {
 }
   
 .fa-primary {
-    color: #ff7eee;
+    color: rgb(11, 198, 255);
 }
   
 .fa-secondary {
-    color: #df49a6;
+    color: rgb(23, 59, 219);
 }
   
 .fa-primary,
