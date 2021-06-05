@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(10, 206, 255);
+    background-image: linear-gradient(to bottom right, rgb(11, 198, 255), rgb(23, 59, 219));
+}
+#heading{
+    text-align: center;
+    color: #C8C6D7;
+}
+#map-container{
+    display: flex;
+    height: 1fr;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+#map { 
+    border: 5px solid #783F8E;
+    height: 500px;
+    width: 1000px;
+}

@@ -11,67 +11,13 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <h1 id="heading">TrackCov19</h1>
     <div id="map-container">
         <div id="map"></div>
     </div>
-    <style>
-        body{
-            background-color: rgb(10, 206, 255);
-            background-image: linear-gradient(to bottom right, rgb(11, 198, 255), rgb(23, 59, 219));
-        }
-        #heading{
-            text-align: center;
-            color: #C8C6D7;
-        }
-        #map-container{
-            display: flex;
-            height: 1fr;
-            position: relative;
-            justify-content: center;
-            align-items: center;
-        }
-        #map { 
-            border: 5px solid #783F8E;
-            height: 500px;
-            width: 1000px;
-        }
-    </style>
-    <script>
-        const map = new L.Map('map', {
-            center: new L.LatLng(30,30),
-            zoom: 1.8,
-            maxZoom: 18
-        });
-        const osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-        map.addLayer(osm);
-
-        function mapColor(list,feature){
-            
-        }
-        let continents = ['Asia', 'Africa','Oceania','North America','South America','Europe']
-        let continent_cases = {}
-        continents.forEach(continent => {
-            $.getJSON(`./continents/${continent}`,data => {
-                continent_cases[continent] = data.cases;
-            })
-        })
-        $.getJSON("https://gist.githubusercontent.com/hrbrmstr/91ea5cc9474286c72838/raw/59421ff9b268ff0929b051ddafafbeb94a4c1910/continents.json",function (data) {
-            const continents = new L.geoJson(data,{
-                style: function(feature){
-                    return {fillColor : mapColor(continent_cases,continent_cases[feature.properties.CONTINENT])}
-                }
-            })
-            map.addLayer(continents)            
-        })
-        // Countries geoJSON
-        // $.getJSON("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson",function(data){
-        //     const countries = new L.geoJson(data);
-
-        //     map.addLayer(countries)
-        // })
-    </script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/index.js')}}"></script>
 </body>
 </html>
