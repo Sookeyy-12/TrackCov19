@@ -1,13 +1,15 @@
 const map = new L.Map('map', {
     center: new L.LatLng(30,30),
     zoom: 1.8,
-    maxZoom: 18
+    maxZoom: 7,
+    minZoom: 1.5,
+    maxBounds : [[200,200],[-200,-200]]
 });
 const osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 map.addLayer(osm);
 
 function mapColor(list,feature){
-    
+    console.log(list,feature)
 }
 let continents = ['Asia', 'Africa','Oceania','North America','South America','Europe']
 let continent_cases = {}
