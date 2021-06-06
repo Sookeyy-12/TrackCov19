@@ -92,7 +92,7 @@ main {
     color: var(--text-secondary);
 }
 
-.nav-link:hover{
+.nav-link1:hover{
   filter: grayscale(0%) opacity(1);
   background: var(--bg-secondary);
   color: var(--text-secondary);
@@ -211,7 +211,7 @@ main {
     transition: 600ms ease;
     display: flex;
     height: 1fr;
-    position: relative;
+    position: center;
     justify-content: center;
     align-items: center;
 }
