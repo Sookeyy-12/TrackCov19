@@ -209,10 +209,12 @@ main {
 }
 
 .maincontent {
+  padding-right: 5px;
     padding-left: 85px;
 }
 
 #question {
+    padding-right: 5px;
     padding-left:5px;
     text-align: left;
     font-size: 40px;
