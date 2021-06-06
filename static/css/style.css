@@ -184,7 +184,7 @@ main {
       width: 16rem;
     }
     
-    .navbar:hover ~ #map-container {
+    .navbar:hover ~ #main {
       padding-left: 16rem;
     }
     .navbar:hover .link-text {
@@ -207,16 +207,26 @@ main {
     text-align: center;
     color: #C8C6D7;
 }
-#map-container{
+#main {
     transition: 600ms ease;
     display: flex;
-    height: 1fr;
-    position: center;
     justify-content: center;
     align-items: center;
+}
+#map-container{
+    padding-right: 20px;
+    height: 1fr;
+    position: center;
 }
 #map { 
     border: 5px solid #783F8E;
     height: 500px;
-    width: 1000px;
+    width: 500px;
+}
+#dashboard {
+    border: 5px solid #783F8E;
+    padding-left: 20px;
+    background-color: #000020;
+    height: 500px;
+    width: 500px;
 }
