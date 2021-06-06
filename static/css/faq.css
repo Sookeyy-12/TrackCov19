@@ -204,6 +204,8 @@ main {
     text-align: center;
     font-size: 30px;
     background-color: rgb(240, 240, 240);
+    background-image: linear-gradient(to bottom , rgb(101, 255, 234), rgb(112, 238, 255));
+
 }
 
 .maincontent {
