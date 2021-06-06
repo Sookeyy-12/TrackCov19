@@ -26,5 +26,9 @@ def return_data_country(name):
 def safety_measures():
     return render_template('safetymeasures.html')
 
+@app.route("/FAQs/")
+def faq_covid19():
+    return render_template('faq.html')
+
 if __name__ == "__main__":
     app.run(port=os.getenv("PORT"), debug=True)
