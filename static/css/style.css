@@ -221,12 +221,12 @@ main {
 #map { 
     border: 5px solid #783F8E;
     height: 500px;
-    width: 500px;
+    width: 700px;
 }
 #dashboard {
     border: 5px solid #783F8E;
     padding-left: 20px;
     background-color: #000020;
     height: 500px;
-    width: 500px;
+    width: 300px;
 }
