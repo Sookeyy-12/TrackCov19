@@ -9,6 +9,9 @@
     justify-content: center;
     align-items: center;
 }
+.navbar:hover ~ #main {
+    padding-left: 16rem;
+}
 #map-container{
     padding-right: 20px;
     height: 1fr;

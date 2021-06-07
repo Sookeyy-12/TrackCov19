@@ -184,10 +184,6 @@ main {
       width: 16rem;
     }
 
-    .navbar:hover ~ #main {
-      padding-left: 16rem;
-    }
-
     .navbar:hover .link-text {
       display: inline;
     }
