@@ -44,36 +44,3 @@ function draw(){
     })
     noLoop()
 }
-        // var circle = L.circle(countries[i], {
-        //     color: 'red',
-        //     fillColor: '#f03',
-        //     fillOpacity: 0.5,
-        //     radius: 500
-        // })
-        // console.log(countries[i])
-        // circle.addto(map);
-
-// function mapColor(list,feature){
-//     console.log(list,feature)
-// }
-// let continents = ['Asia', 'Africa','Oceania','North America','South America','Europe']
-// let continent_cases = {}
-// continents.forEach(continent => {
-//     $.getJSON(`./continents/${continent}`,data => {
-//         continent_cases[continent] = data.cases;
-//     })
-// })
-// $.getJSON("https://gist.githubusercontent.com/hrbrmstr/91ea5cc9474286c72838/raw/59421ff9b268ff0929b051ddafafbeb94a4c1910/continents.json",function (data) {
-//     const continents = new L.geoJson(data,{
-//         style: function(feature){
-//             return {fillColor : mapColor(continent_cases,continent_cases[feature.properties.CONTINENT])}
-//         }
-//     })
-//     map.addLayer(continents)            
-// })
-// Countries geoJSON
-// $.getJSON("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson",function(data){
-//     const countries = new L.geoJson(data);
-
-//     map.addLayer(countries)
-// })
