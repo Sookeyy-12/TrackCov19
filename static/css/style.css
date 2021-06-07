@@ -4,7 +4,7 @@ body {
 #heading{
     font-family: monospace;
     text-align: center;
-    color: #C8C6D7;
+    color: #000000;
 }
 #main {
     transition: 600ms ease;
