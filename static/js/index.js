@@ -39,7 +39,7 @@ function draw(){
                 fillOpacity: 0.5,
                 radius: data[index]['active']
             }).addTo(map)
-            circle.bindPopup(`Active cases: ${data[index]['active']}`)
+            circle.bindPopup(`<center><b>${data[index]['country']}</b></center><br>Active cases: ${data[index]['active']}`)
         }
     })
     let loader = document.getElementById('css-loader');
