@@ -42,5 +42,7 @@ function draw(){
             circle.bindPopup(`Active cases: ${data[index]['active']}`)
         }
     })
+    let loader = document.getElementById('css-loader');
+    loader.style.display ='none'
     noLoop()
 }
