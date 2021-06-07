@@ -1,3 +1,6 @@
+body {
+    overflow: hidden;
+}
 #heading{
     font-family: monospace;
     text-align: center;
