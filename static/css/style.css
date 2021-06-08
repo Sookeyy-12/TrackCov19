@@ -26,9 +26,78 @@ body {
     width: 700px;
 }
 #dashboard {
-    border: 5px solid #783F8E;
-    padding-left: 20px;
+    border: 5px solid #23232e;
     background-color: #000020;
     height: 500px;
     width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        ".";
+}
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+}
+#country-select {
+    height: 30px;
+    width: 200px
+}
+.button {
+  position: relative;
+  background-color: #4CAF50;
+  border: none;
+  font-size: 13px;
+  color: #FFFFFF;
+  padding: 20px;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+.dashboard-text {
+    color: white;
 }
