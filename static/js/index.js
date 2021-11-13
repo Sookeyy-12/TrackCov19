@@ -32,9 +32,9 @@ function draw(){
     if(Object.keys(data).length != 240){
         return
     }
-    // $.getJSON("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson",function(received_data){
-    //     countriesGeoJSON = new L.geoJson(received_data);
-    //     map.addLayer(countriesGeoJSON);
+    $.getJSON("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson",function(received_data){
+        countriesGeoJSON = new L.geoJson(received_data);
+        map.addLayer(countriesGeoJSON);
         // countriesGeoJSON.on({
         //     click: display_data
         // })
@@ -44,7 +44,7 @@ function draw(){
             
         //     console.log(active,cases,deaths,population,recovered,todayCases,todayRecovered,todayDeaths)
         // }
-    // })
+    })
     indexes.forEach(index =>{
         if(data[index]['active'] > 0){
             var circle = L.circle(countries[index],{
