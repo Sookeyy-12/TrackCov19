@@ -1,5 +1,4 @@
 let countries
-let country_data = []
 let indexes
 let data = {}
 let map
@@ -33,8 +32,28 @@ function draw(){
         return
     }
     $.getJSON("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson",function(received_data){
-        countriesGeoJSON = new L.geoJson(received_data);
+        countriesGeoJSON = new L.geoJson(received_data,{style: function(feature){
+            return {
+                fillColor: getColor(feature.properties.ISO_A2),
+                opacity: 1,
+            }
+        }
+        });
         map.addLayer(countriesGeoJSON);
+
+        function getColor(country_code){
+            // print(country_code)
+            if(data[country_code.toLowerCase()] == undefined){
+                return '#000000'
+            }
+            return(getGreenToRed(data[country_code.toLowerCase()]['active']/data[country_code.toLowerCase()]['population']*50000))
+        }
+        
+        function getGreenToRed(percent){
+            g = percent<50 ? 255 : Math.floor(255-(percent*2-100)*255/100);
+            r = percent>50 ? 255 : Math.floor((percent*2)*255/100);
+            return 'rgb('+r+','+g+',0)';
+        }
         // countriesGeoJSON.on({
         //     click: display_data
         // })
@@ -45,17 +64,20 @@ function draw(){
         //     console.log(active,cases,deaths,population,recovered,todayCases,todayRecovered,todayDeaths)
         // }
     })
-    indexes.forEach(index =>{
-        if(data[index]['active'] > 0){
-            var circle = L.circle(countries[index],{
-                color: 'red',
-                fillColor: '#f03',
-                fillOpacity: 0.5,
-                radius: data[index]['active']
-            }).addTo(map)
-            circle.bindPopup(`<center><b>${data[index]['country']}</b></center><br>Active cases: ${data[index]['active']}`)
-        }
-    })
+    // indexes.forEach(index =>{
+    //     if(data[index]['active'] > 0){
+    //         var circle = L.circle(countries[index],{
+    //             color: 'red',
+    //             fillColor: '#f03',
+    //             fillOpacity: 0.5,
+    //             radius: data[index]['active']
+    //         }).addTo(map)
+    //         circle.bindPopup(`<center><b>${data[index]['country']}</b></center><br>Active cases: ${data[index]['active']}`)
+    //     }
+    // })
+    // indexes.forEach(index =>{
+    //     // print(data[index]['country'] + ' : ' +  data[index]['active']/data[index]['population']*100)
+    // })
     let loader = document.getElementById('css-loader');
     loader.style.display ='none'
     noLoop()
