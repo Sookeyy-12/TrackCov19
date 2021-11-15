@@ -35,7 +35,7 @@ function draw(){
         countriesGeoJSON = new L.geoJson(received_data,{style: function(feature){
             return {
                 fillColor: getColor(feature.properties.ISO_A2),
-                opacity: 1,
+                fillOpacity: 0.3,
             }
         }
         });
@@ -46,7 +46,18 @@ function draw(){
             if(data[country_code.toLowerCase()] == undefined){
                 return '#000000'
             }
-            return(getGreenToRed(data[country_code.toLowerCase()]['active']/data[country_code.toLowerCase()]['population']*50000))
+            let ratio = data[country_code.toLowerCase()].active/data[country_code.toLowerCase()].population * 100
+            if (ratio < 0.1){
+                ratio *= 300
+            } else if (ratio < 1){
+                ratio = 30 + (ratio - 0.1) * 100/3
+            } else if (ratio < 3){
+                ratio = 60 + (ratio - 1) * 20
+            } else {
+                ration = 80 + (ratio - 3) * 20/(15-3)
+            }
+            return(getGreenToRed(ratio))
+            // return(getGreenToRed(data[country_code.toLowerCase()]['active']/data[country_code.toLowerCase()]['population']*50000))
         }
         
         function getGreenToRed(percent){
