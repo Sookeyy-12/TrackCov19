@@ -2,7 +2,7 @@
 A Webpage which displays various information about Covid-19.
 <br>
 <br>
-<img src="screenshots/homepage.png">
+<img src="screenshots/homepage.png" alt="TrackCov19">
 
 # Setting up
 1. Star this repository :heart: (optional)
