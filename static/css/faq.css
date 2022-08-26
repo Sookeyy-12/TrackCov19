@@ -1,27 +1,24 @@
 .head {
-    width: 100%;
-    text-align: center;
-    font-size: 30px;
-    background-color: rgb(240, 240, 240);
-    background-image: linear-gradient(to bottom , rgb(101, 255, 234), rgb(112, 238, 255));
+  background: rgb(23, 59, 219);
+  font-size: 25px;
+  text-align: center;
+}
 
+body {
+  font-weight: bold;
+  font-family: consolas;
+  background-color: rgb(11, 198, 255);
 }
 
 .maincontent {
-  padding-right: 5px;
-    padding-left: 85px;
+  
+  padding-left: 5%;
 }
 
 #question {
-    padding-right: 5px;
-    padding-left:5px;
-    text-align: left;
-    font-size: 40px;
-    
+  font-size: 40px;
 }
 
-p2, p4, p6 {
-    padding-left: 25px;
-    text-align: left;
-    font-size: 20px;
+ul {
+  font-size: 20px;
 }
