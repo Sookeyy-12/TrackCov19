@@ -1,5 +1,5 @@
 .head {
-  background: rgb(23, 59, 219);
+  background: orangered;
   font-size: 25px;
   text-align: center;
 }
@@ -7,7 +7,7 @@
 body {
   font-weight: bold;
   font-family: consolas;
-  background-color: rgb(11, 198, 255);
+  background-color: orange !important;
 }
 
 .maincontent {

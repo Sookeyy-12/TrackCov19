@@ -1,25 +1,24 @@
-.maincontent {
-    padding-left: 85px;
+.head {
+  background: orangered;
+  font-size: 25px;
+  text-align: center;
 }
 
-.head {
-    width: 100%;
-    text-align: center;
-    font-size: 30px;
-    background-color: rgb(240, 240, 240);
-    background-image: linear-gradient(to bottom , rgb(101, 255, 234), rgb(112, 238, 255));
+body {
+  font-weight: bold;
+  font-family: consolas;
+  background-color: orange !important;
+}
 
+.maincontent {
+  
+  padding-left: 5%;
 }
 
 #title {
-  padding-left:5px;
-  text-align: left;
   font-size: 40px;
-  
 }
 
-#sub-content {
-  padding-left: 25px;
-  text-align: left;
+ul {
   font-size: 20px;
 }

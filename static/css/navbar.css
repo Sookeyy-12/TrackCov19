@@ -9,8 +9,7 @@
 }
 
 body {
-    background-color: rgb(10, 206, 255);
-    background-image: linear-gradient(to bottom right, rgb(187, 233, 255), rgb(73, 219, 255));
+    background-color: orange;
     margin: 0;
     padding: 0;
 }
@@ -33,11 +32,11 @@ main {
 }
 
 .fa-primary {
-  color: rgb(11, 198, 255);
+  color: orange;
 }
 
 .fa-secondary {
-  color: rgb(23, 59, 219);
+  color: orangered;
 }
 
 .fa-primary,
